@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html ng-app="frontendTest" >
+    <head>
+        <title>ng-AppGen - Angular Application Generator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="app.less" type="text/css" rel="stylesheet/less" />
+    </head>
+    <body>
+        <!-- Livereload script for development only (stripped during dist build) -->
+        <script src="http://localhost:35729/livereload.js" data-concat="false"></script>
+        <!-- JS from Bower Components -->
+        <script src="../bower_components/less.js/dist/less-1.6.2.js" data-concat="false"></script>
+        <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="../bower_components/underscore/underscore.js"></script>
+        <script src="../bower_components/moment/moment.js"></script>
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="../bower_components/angular-route/angular-route.js"></script>
+        <script src="../bower_components/angular-animate/angular-animate.js"></script>
+        <script src="../bower_components/angular-resource/angular-resource.js"></script>
+        <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="../bower_components/angular-ui-utils/ui-utils.js"></script>
+        <script src="../bower_components/angular-loading-bar/build/loading-bar.js"></script>
+        <script src="../bower_components/restangular/dist/restangular.js"></script>
+        <!-- Add New Bower Component JS Above -->
+        <!-- Main App JS -->
+        <script src="app.js"></script>
+        <script src="home/home.js"></script>
+        <script src="home/controllers/home-controller.js"></script>
+        <script src="home/services/home-service.js"></script>
+        <script src="common/common.js"></script>
+        <script src="common/controllers/common-controller.js"></script>
+        <script src="common/services/common-service.js"></script>
+        <!-- Add New Component JS Above -->
+        <div class="container">
+            <header class="header clearfix">
+                <div class="row">
+                    <div class="col-lg-4">
+                        TITLE
+                    </div>
+                    <div class="col-lg-4">
+                        SEARCH
+                    </div>
+                </div>
+            </header>
+
+            <main id="content" class="container" ng-view >
+                <div class="row">
+                    <article class="col-lg-8">
+                        <section>
+                            <header><h4>Today's foo:bar</h4></header>
+                            <ul class="media-list">
+                                <li class="media">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object" src="fbs.png" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Item name</h4>
+                                        <p>Item short description, maybe two lines long.</p>
+                                    </div>
+                                </li>
+                                <li class="media">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object" src="fbs.png" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Item name</h4>
+                                        <p>Item short description, maybe two lines long.</p>
+                                    </div>
+                                </li>
+                                <li class="media">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object" src="fbs.png" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Item name</h4>
+                                        <p>Item short description, maybe two lines long.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <header><h4>Your favourites</h4></header>
+                            <ul class="media-list">
+                                <li class="media">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object" src="fbs.png" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Item name</h4>
+                                        <p>Item short description, maybe two lines long.</p>
+                                    </div>
+                                </li>
+                                <li class="media">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object" src="fbs.png" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Item name</h4>
+                                        <p>Item short description, maybe two lines long.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                    </article>
+                    <aside class="col-lg-4">
+                        <section>
+                            <header><h4>Create foo:bar</h4></header>                          
+                        </section>
+                        <section>
+                            <header><h4>Created by you</h4></header>
+                            <ul class="media-list">
+                                <li class="media">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object" src="fbs.png" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Item name</h4>
+                                        <p>Item short description, maybe two lines long.</p>
+                                    </div>
+                                </li>
+                                <li class="media">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object" src="fbs.png" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Item name</h4>
+                                        <p>Item short description, maybe two lines long.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>                    </aside>
+                </div>
+            </main>
+            
+            <footer class="footer">
+                <p class="pull-left">42, 2nd Street. Pointplace, WI</p>
+                <nav class="pull-right">
+                    <a href="/about/">About us</a> |
+                    <a href="/legal/">Legal</a>
+                </nav>
+            </footer>
+        </div> <!-- /container -->
+    </body>
+</html>
