@@ -36,25 +36,39 @@
         <script src="common/directives/item-list.js"></script>
         <script src="results/results.js"></script>
         <script src="common/services/item-service.js"></script>
-
         <script src="common/directives/myitem-list.js"></script>
         <script src="common/directives/myitem.js"></script>
+        <script src="common/directives/searchbox.js"></script>
+        <script src="results/controllers/results-controller.js"></script>
+        <script src="components/backend-mock/backend-mock.js"></script>
         <!-- Add New Component JS Above -->
         <div class="container">
             <header class="header clearfix">
                 <div class="row">
                     <div class="col-lg-4">
-                        TITLE
+                        <a href="/app/#/home">TITLE</a>
                     </div>
                     <div class="col-lg-4">
-                        SEARCH
+                        <searchbox>
                     </div>
                 </div>
             </header>
-
-            <main id="content" class="container" ng-view >
+            <main id="content" class="container" >
+                <div class="row">
+                    <article ng-view class="col-lg-8">
+                    </article>
+                    <aside class="col-lg-4">
+                        <section>
+                            <header><h3>Create foo:bar</h3></header>                          
+                        </section>
+                        <section>
+                            <header><h3>Created by you</h3></header>
+                            <myitem:list items="myItems">
+                        </section>                    
+                    </aside>
+                </div>            
             </main>
-            
+
             <footer class="footer">
                 <p class="pull-left">42, 2nd Street. Pointplace, WI</p>
                 <nav class="pull-right">
@@ -62,6 +76,6 @@
                     <a href="/legal/">Legal</a>
                 </nav>
             </footer>
-        </div> <!-- /container -->
-    </body>
-</html>
+            </div> <!-- /container -->
+        </body>
+    </html>
