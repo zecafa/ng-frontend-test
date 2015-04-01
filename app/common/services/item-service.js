@@ -16,7 +16,14 @@
              * @return {Array} 
              */
             getToday: function() {
-                return $http.get('/items');
+                return $http({
+                    method: 'GET',
+                    url: '/items',
+                    params: {
+                        'limit': 3,
+                        'hideFavs': true
+                    }
+                });            
             },
             /**
              * Get items filtered by search in category field
@@ -24,7 +31,13 @@
              * @return {Array}
              */
             searchCategory: function(categorySearch) {
-                return $http.get('/items?search='+categorySearch);
+                return $http({
+                    method: 'GET',
+                    url: '/items',
+                    params: {
+                        'filterCategory': categorySearch
+                    }
+                });  
             },
             /**
              * Get items by id's array
@@ -40,7 +53,7 @@
                     }
                 });
             }
-        }
+        };
     });
 
 })();

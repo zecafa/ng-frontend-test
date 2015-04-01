@@ -63,8 +63,12 @@
      */
     angular.module('home').controller('homeController', function($scope, itemService) {
         var myIds = [1,2];
-        $scope.todayItems = itemService.getToday();
-        $scope.favItems = itemService.getByIds(myIds);
+        itemService.getToday().success(function(data){
+            $scope.todayItems = data;
+        });
+        itemService.getByIds(myIds).success(function(data){
+            $scope.favItems = data;
+        });
         // $scope.myItems = myItems;
 
     });
