@@ -26,12 +26,12 @@
         "file": "app/home/home.js"
       },
       {
-        "name": "help",
-        "file": "app/help/help.js"
-      },
-      {
         "name": "common",
         "file": "app/common/common.js"
+      },
+      {
+        "name": "results",
+        "file": "app/results/results.js"
       }
     ]
   }
