@@ -17,12 +17,9 @@
             scope: {
                 items: '='
             },
-            templateUrl: 'common/directives/myitem-list.html',
-            link: function(scope, element, attrs, fn) {
-
-            }
+            templateUrl: 'common/directives/myitem-list.html'
         };
 
     });
 
-})();
+}());

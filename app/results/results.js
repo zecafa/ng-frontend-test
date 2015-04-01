@@ -12,6 +12,10 @@
     
     angular.module('results').config(function($routeProvider) {
 
+        $routeProvider.when('/results',{
+            templateUrl: 'results/templates/results-template.html',
+            controller: 'resultsController'
+            });
         /* Add New Routes Above */
 
     });
