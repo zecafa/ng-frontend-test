@@ -31,7 +31,13 @@
         <script src="home/services/home-service.js"></script>
         <script src="common/common.js"></script>
         <script src="common/controllers/common-controller.js"></script>
-        <script src="common/services/common-service.js"></script>
+        <script src="common/directives/item.js"></script>
+        <script src="common/directives/item-list.js"></script>
+        <script src="results/results.js"></script>
+        <script src="common/services/item-service.js"></script>
+
+        <script src="common/directives/myitem-list.js"></script>
+        <script src="common/directives/myitem.js"></script>
         <!-- Add New Component JS Above -->
         <div class="container">
             <header class="header clearfix">
@@ -46,92 +52,6 @@
             </header>
 
             <main id="content" class="container" ng-view >
-                <div class="row">
-                    <article class="col-lg-8">
-                        <section>
-                            <header><h4>Today's foo:bar</h4></header>
-                            <ul class="media-list">
-                                <li class="media">
-                                    <a class="pull-left" href="#">
-                                        <img class="media-object" src="fbs.png" alt="">
-                                    </a>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Item name</h4>
-                                        <p>Item short description, maybe two lines long.</p>
-                                    </div>
-                                </li>
-                                <li class="media">
-                                    <a class="pull-left" href="#">
-                                        <img class="media-object" src="fbs.png" alt="">
-                                    </a>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Item name</h4>
-                                        <p>Item short description, maybe two lines long.</p>
-                                    </div>
-                                </li>
-                                <li class="media">
-                                    <a class="pull-left" href="#">
-                                        <img class="media-object" src="fbs.png" alt="">
-                                    </a>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Item name</h4>
-                                        <p>Item short description, maybe two lines long.</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </section>
-                        <section>
-                            <header><h4>Your favourites</h4></header>
-                            <ul class="media-list">
-                                <li class="media">
-                                    <a class="pull-left" href="#">
-                                        <img class="media-object" src="fbs.png" alt="">
-                                    </a>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Item name</h4>
-                                        <p>Item short description, maybe two lines long.</p>
-                                    </div>
-                                </li>
-                                <li class="media">
-                                    <a class="pull-left" href="#">
-                                        <img class="media-object" src="fbs.png" alt="">
-                                    </a>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Item name</h4>
-                                        <p>Item short description, maybe two lines long.</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </section>
-                    </article>
-                    <aside class="col-lg-4">
-                        <section>
-                            <header><h4>Create foo:bar</h4></header>                          
-                        </section>
-                        <section>
-                            <header><h4>Created by you</h4></header>
-                            <ul class="media-list">
-                                <li class="media">
-                                    <a class="pull-left" href="#">
-                                        <img class="media-object" src="fbs.png" alt="">
-                                    </a>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Item name</h4>
-                                        <p>Item short description, maybe two lines long.</p>
-                                    </div>
-                                </li>
-                                <li class="media">
-                                    <a class="pull-left" href="#">
-                                        <img class="media-object" src="fbs.png" alt="">
-                                    </a>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Item name</h4>
-                                        <p>Item short description, maybe two lines long.</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </section>                    </aside>
-                </div>
             </main>
             
             <footer class="footer">

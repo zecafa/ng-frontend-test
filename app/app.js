@@ -8,7 +8,7 @@
      * @author: Tapas Jena
      * @copyright: Anitech Consulting Services Pvt Ltd.
      */
-    angular.module('frontendTest', ['ui.bootstrap','ui.utils', 'ngRoute', 'ngAnimate', 'restangular', 'angular-loading-bar', 'home', 'help', 'common']);
+    angular.module('frontendTest', ['ui.bootstrap', 'ui.utils', 'ngRoute', 'ngAnimate', 'restangular', 'angular-loading-bar', 'home', 'common', 'results']);
     
     angular.module('frontendTest').config(function($routeProvider) {
 

@@ -1,18 +1,21 @@
 <div class="row">
-    <div class="col-lg-6">
-        <h4>Subheading</h4>
-        <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-        <h4>Subheading</h4>
-        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-        <h4>Subheading</h4>
-        <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    </div>
-    <div class="col-lg-6">
-        <h4>Subheading</h4>
-        <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-        <h4>Subheading</h4>
-        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-        <h4>Subheading</h4>
-        <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    </div>
+    <article class="col-lg-8">
+        <section>
+            <header><h3>Today's foo:bar</h3></header>
+            <item:list items="todayItems">
+        </section>
+        <section>
+            <header><h3>Your favourites</h3></header>
+            <item:list items="favItems">
+        </section>
+    </article>
+    <aside class="col-lg-3">
+        <section>
+            <header><h3>Create foo:bar</h3></header>                          
+        </section>
+        <section>
+            <header><h3>Created by you</h3></header>
+            <myitem:list items="myItems">
+        </section>                    
+    </aside>
 </div>
