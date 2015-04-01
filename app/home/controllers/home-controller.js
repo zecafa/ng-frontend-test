@@ -61,11 +61,11 @@
      * @author: Tapas Jena
      * @copyright: Anitech Consulting Services Pvt Ltd.
      */
-    angular.module('home').controller('homeController', function($scope, homeService) {
-
-        $scope.todayItems = todayItems;
-        $scope.favItems = favItems;
-        $scope.myItems = myItems;
+    angular.module('home').controller('homeController', function($scope, itemService) {
+        var myIds = [1,2];
+        $scope.todayItems = itemService.getToday();
+        $scope.favItems = itemService.getByIds(myIds);
+        // $scope.myItems = myItems;
 
     });
 
