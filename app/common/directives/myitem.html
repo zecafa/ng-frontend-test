@@ -1,8 +1,9 @@
 <li class="media">
-    <a class="pull-left" href="#">
-        <img class="media-object" src="" alt="">
-    </a>
+    <div class="media-left">
+        <img class="media-object" src="assets/imgs/user.png" alt="User image">
+    </div>
     <div class="media-body">
+    	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="media-heading">{{item.title}}</h4>
         <p>{{item.description|limitTo:50}}</p>
     </div>
