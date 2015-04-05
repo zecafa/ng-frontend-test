@@ -9,7 +9,7 @@
     angular.module('backendMock').run(function($httpBackend, $log) {
 
         $httpBackend.whenGET(/items.*/).respond(function(method, url, data, headers) {
-            var data = [{
+            var items = [{
                 "id": 0,
                 "title": "ipsum laborum reprehenderit eu aute",
                 "description": "Cillum nostrud do in deserunt voluptate nisi ad. Irure reprehenderit aliqua irure adipisicing Lorem. Est aute amet ea ex anim aliquip enim veniam.\r\n",
@@ -79,7 +79,7 @@
             var query = url.split('?')[1],
                 requestParams = {};
             $log.debug('Ajax request: ', url);        
-            return [200, data];
+            return [200, items];
         });
         $httpBackend.whenGET(/.*/).passThrough();
 

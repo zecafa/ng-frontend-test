@@ -56,7 +56,7 @@ img.bg {
   z-index: -1;
 }
 
-header, article, aside, footer{
+header, article, aside .bg, footer{
 	background-color: @gray-dark;
 }
 
@@ -70,12 +70,6 @@ header#main-header {
 	}
 }
 
-article, footer {
-	padding-left: 0px;
-	border-right: 8px;
-	border-color: #fff;
-}
-
 footer{
 	height: 75px;
 	margin-top: 8px;
@@ -87,5 +81,9 @@ h3{
 }
 
 aside.col-lg-4{
-	border-left: 8px solid white;
+	padding: 0 0 0 10px;
+	.bg{
+		padding: 15px;
+		margin: 0;
+	}
 }
