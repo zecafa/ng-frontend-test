@@ -1,9 +1,14 @@
 <li class="media">
-    <a class="pull-left" href="#">
-        <img class="media-object" src="" alt="">
-    </a>
+    <div class="media-left">
+        <img class="media-object" src="assets/imgs/{{item.category}}.png" alt="...">
+    </div>
     <div class="media-body">
         <h4 class="media-heading">{{item.title}}</h4>
-        <p>{{item.description|limitTo:200}}</p>
+        <p>{{item.description|limitTo:120}}</p>
+    </div>
+    <div class="media-right">
+        <a href="#">
+        <img class="media-object" src="assets/imgs/hearth.png" alt="...">
+        </a>
     </div>
 </li>
