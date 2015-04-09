@@ -1,14 +1,22 @@
 (function() {
     'use strict';
-
     /**
      *
      * @author: Jose Carlos Fernandez
      */
     angular.module('backendMock', ['ngMockE2E']);
-    angular.module('backendMock').run(function($httpBackend, $log) {
-
+    angular.module('backendMock').run(function($httpBackend, $log, $filter) {
         $httpBackend.whenGET(/items.*/).respond(function(method, url, data, headers) {
+            function isNumber(n) {
+                return !isNaN(parseFloat(n)) && isFinite(n);
+            }
+            function checkName(name) {
+                if (name !== '') {
+                    var v = value;
+                    value = {};
+                    value[lastKey = name] = isNumber(v) ? parseFloat(v) : v;
+                }
+            }
             var items = [{
                 "id": 0,
                 "title": "ipsum laborum reprehenderit eu aute",
@@ -77,11 +85,40 @@
                 "image": "lemon.png"
             }];
             var query = url.split('?')[1],
-                requestParams = {};
-            $log.debug('Ajax request: ', url);        
+                requestParams = {},
+                key,
+                ids,
+                i,
+                vars = query.split('&');
+
+            for (i = 0; i < vars.length; i++) {
+                var pair = vars[i].split('=');
+                requestParams[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
+            }
+            // parse url params
+            for (key in requestParams) {
+                if (key.indexOf('[') >= 0) {
+                    var params = key.split(/\[(.*)\]/),
+                        value = requestParams[key],
+                        lastKey = '';
+                    angular.forEach(params.reverse(), checkName(name));
+                    requestParams[lastKey] = angular.extend(requestParams[lastKey] || {}, value[lastKey]);
+                } else {
+                    requestParams[key] = isNumber(requestParams[key]) ? parseFloat(requestParams[key]) : requestParams[key];
+                }
+            }
+            $log.debug('Ajax request: ', url, query, vars, requestParams);
+
+            if(!!requestParams.id) {
+                ids = requestParams.id.split(',').map( Number );                
+            }
+            // items = !!requestParams.filter ? $filter('filter')(items, {category:requestParams.filter}) : items;
+            items = !!ids ? $filter('filter')(items, function(v,k) {
+                return ids.indexOf(v.id)!== -1;
+            }):items;
+            items = !!requestParams.limit ? $filter('limitTo')(items, requestParams.limit) : items;
             return [200, items];
         });
         $httpBackend.whenGET(/.*/).passThrough();
-
     });
 }());

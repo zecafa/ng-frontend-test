@@ -48,7 +48,7 @@
                     method: 'GET',
                     url: '/items',
                     params: {
-                        'id[]': ids
+                        'id': ids.join()
                     }
                 });
             }

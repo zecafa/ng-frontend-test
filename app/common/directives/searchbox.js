@@ -9,7 +9,6 @@
      */
     angular.module('common').directive('searchbox', function($location) {
         
-        //TODO: Implement your complex directive logic here
         return {
             restrict: 'E',
             replace: true,
