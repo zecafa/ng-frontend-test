@@ -13,7 +13,6 @@
         $localStorage.$default({
             favItems: []
         });
-        // $localStorage.$reset();
     });
 
 

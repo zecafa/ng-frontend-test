@@ -117,7 +117,7 @@
             items = !!ids ? $filter('filter')(items, function(v,k) {
                 return ids.indexOf(v.id)!== -1;
             }):items;
-            // items = !!requestParams.filter ? $filter('filter')(items, {category:requestParams.filter}) : items;
+            items = !!requestParams.filterCategory ? $filter('filter')(items, {category:requestParams.filterCategory}) : items;
             items = !!requestParams.limit ? $filter('limitTo')(items, requestParams.limit) : items;
             return [200, items];
         });
