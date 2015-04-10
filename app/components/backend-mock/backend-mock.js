@@ -109,8 +109,10 @@
             }
             $log.debug('Ajax request: ', url, query, vars, requestParams);
 
-            if(!!requestParams.id) {
-                ids = requestParams.id.split(',').map( Number );                
+            if(typeof requestParams.id !== "undefined") {
+                ids = requestParams.id === "array" ?
+                    requestParams.id.split(',').map( Number ) :
+                    [requestParams.id];
             }
             // items = !!requestParams.filter ? $filter('filter')(items, {category:requestParams.filter}) : items;
             items = !!ids ? $filter('filter')(items, function(v,k) {

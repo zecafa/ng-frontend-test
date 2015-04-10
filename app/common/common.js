@@ -7,13 +7,14 @@
      *
      * @author: Jose Carlos Fernandez
      */
-    angular.module('common', ['ui.bootstrap', 'ui.utils', 'ngRoute', 'ngAnimate', 'restangular']);
+    angular.module('common', ['ui.bootstrap', 'ui.utils', 'ngRoute', 'ngAnimate', 'restangular', 'ngStorage']);
     
-    angular.module('common').config(function($routeProvider) {
-
-        /* Add New Routes Above */
-
+    angular.module('common').run(function($localStorage) {
+        $localStorage.$default({
+            favItems: []
+        });
+        // $localStorage.$reset();
     });
-    
 
-})();
+
+}());

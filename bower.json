@@ -23,6 +23,7 @@
     "moment": "~2.5",
     "less.js": "~1.7.5",
     "font-awesome": "~4.2.0",
-    "angular-loading-bar": "~0.6.0"
+    "angular-loading-bar": "~0.6.0",
+    "ngstorage": "~0.3.0"
   }
 }

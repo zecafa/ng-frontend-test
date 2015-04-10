@@ -7,8 +7,8 @@
         <p>{{item.description|limitTo:120}}</p>
     </div>
     <div class="media-right">
-        <a href="#">
-        <img class="media-object" src="assets/imgs/hearth.png" alt="...">
+        <a ng-click="toggleFav()" ng-class="fav-item">
+        <img class="media-object" ng-src="{{getFavImgSrc()}}" >
         </a>
     </div>
 </li>

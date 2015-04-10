@@ -7,7 +7,7 @@
      *
      * @author: Jose Carlos Fernandez
      */
-    angular.module('common').directive('item', function() {
+    angular.module('common').directive('item', function(itemService) {
 
         //TODO: Implement your complex directive logic here
         return {
@@ -15,7 +15,14 @@
             replace: true,
             templateUrl: 'common/directives/item.html',
             link: function(scope, element, attrs, fn) {
-
+                scope.getFavImgSrc = function(){
+                    return itemService.isFavourite(scope.item.id) ?
+                        'assets/imgs/hearth_fav.png':
+                        'assets/imgs/hearth.png';
+                };
+                scope.toggleFav = function() {
+                    return itemService.toggleFavourite(scope.item.id);
+                };
             }
         };
 
