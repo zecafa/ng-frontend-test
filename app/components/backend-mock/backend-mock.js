@@ -110,14 +110,14 @@
             $log.debug('Ajax request: ', url, query, vars, requestParams);
 
             if(typeof requestParams.id !== "undefined") {
-                ids = requestParams.id === "array" ?
+                ids = (typeof requestParams.id === "string") ?
                     requestParams.id.split(',').map( Number ) :
                     [requestParams.id];
             }
-            // items = !!requestParams.filter ? $filter('filter')(items, {category:requestParams.filter}) : items;
             items = !!ids ? $filter('filter')(items, function(v,k) {
                 return ids.indexOf(v.id)!== -1;
             }):items;
+            // items = !!requestParams.filter ? $filter('filter')(items, {category:requestParams.filter}) : items;
             items = !!requestParams.limit ? $filter('limitTo')(items, requestParams.limit) : items;
             return [200, items];
         });

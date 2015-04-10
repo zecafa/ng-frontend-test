@@ -7,7 +7,7 @@
      *
      * @author: Jose Carlos Fernandez
      */
-    angular.module('common').directive('item', function(itemService) {
+    angular.module('common').directive('item', function(itemService,$route) {
 
         //TODO: Implement your complex directive logic here
         return {
@@ -21,7 +21,8 @@
                         'assets/imgs/hearth.png';
                 };
                 scope.toggleFav = function() {
-                    return itemService.toggleFavourite(scope.item.id);
+                    itemService.toggleFavourite(scope.item.id);
+                    $route.reload();
                 };
             }
         };
