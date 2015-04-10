@@ -22,7 +22,7 @@
                 };
                 scope.toggleFav = function() {
                     itemService.toggleFavourite(scope.item.id);
-                    $route.reload();
+                    scope.$emit('REFRESH_FAVITEMS_LIST');
                 };
             }
         };

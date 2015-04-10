@@ -89,8 +89,8 @@
                 key,
                 ids,
                 i,
-                vars = query.split('&');
-
+                vars;
+            vars = !!query ? query.split('&') : [];
             for (i = 0; i < vars.length; i++) {
                 var pair = vars[i].split('=');
                 requestParams[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);

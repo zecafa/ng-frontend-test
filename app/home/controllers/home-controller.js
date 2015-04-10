@@ -12,6 +12,11 @@
             $scope.favItems = data;
         });
 
+        $scope.$on('REFRESH_FAVITEMS_LIST', function() {
+            itemService.getFavourites().success(function(data){
+                $scope.favItems = data;
+            });            
+        });
     });
 
 })();
