@@ -8,8 +8,8 @@ Installation
    Prerequisite: [NodeJS](https://nodejs.org/).
    
    Clone this repository:
+   
       git clone git@github.com:zecafa/ng-frontend-test.git
-      
       cd ng-frontend-test
    
    Next, install grunt and project dependencies:
