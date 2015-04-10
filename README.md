@@ -7,7 +7,8 @@ Installation
 -------------
    Prerequisite: Node
    Next, install grunt:
-      npm install -g grunt-cli
+   
+    npm install -g grunt-cli
    
    Launch the app in dev environment:
 
