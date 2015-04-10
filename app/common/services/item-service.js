@@ -52,14 +52,13 @@
             },
             getFavourites: function() {
                 var ids = $localStorage.favItems.join();
-                var params = !! ids ? {
-                    'id': ids
-                } : {};
-console.log(ids);                
+                ids = !!ids ? ids : -1;
                 return $http({
                     method: 'GET',
                     url: '/items',
-                    params: params
+                    params: {
+                        'id': ids
+                    }
                 });
             },
             isFavourite: function(id) {
